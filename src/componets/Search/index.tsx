@@ -56,7 +56,7 @@ const Search: React.FC<SearchProps> = ({ handleDistanceMglt, distance }) => {
           {...register('mglt')}
           defaultValue={distance ?? ''}
           type="text"
-          placeholder="Digite uma medida MGTL (anos luz), ex: 1000000"
+          placeholder="Digite uma distâcia MGTL (anos luz), ex: 1000000"
         />
         <button type="submit">Buscar Naves</button>
       </Form>
