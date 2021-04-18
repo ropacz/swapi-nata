@@ -14,13 +14,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => (
 
 interface SearchProps {
   handleDistanceMglt: (mglt: string) => void;
+  distance: string | null;
 }
 
 type SearchFormValues = {
   mglt: string;
 };
 
-const Search: React.FC<SearchProps> = ({ handleDistanceMglt }) => {
+const Search: React.FC<SearchProps> = ({ handleDistanceMglt, distance }) => {
   const { register, handleSubmit } = useForm<SearchFormValues>();
 
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -28,17 +29,17 @@ const Search: React.FC<SearchProps> = ({ handleDistanceMglt }) => {
   const onSubmit: SubmitHandler<SearchFormValues> = useCallback(
     ({ mglt }: SearchFormValues) => {
       if (mglt === '') {
-        setErrorMessage('Preencha a busca');
+        setErrorMessage('Preencha a busca com uma distância.');
         return;
       }
 
       if (Number.isNaN(+mglt)) {
-        setErrorMessage('Insira valores númericos');
+        setErrorMessage('Digite apenas números inteiros.');
         return;
       }
 
       if (+mglt > 100000000) {
-        setErrorMessage('Distância muito grande');
+        setErrorMessage('Distância muito grande.');
         return;
       }
 
@@ -47,13 +48,13 @@ const Search: React.FC<SearchProps> = ({ handleDistanceMglt }) => {
     },
     [handleDistanceMglt],
   );
-  
 
   return (
     <>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input
           {...register('mglt')}
+          defaultValue={distance ?? ''}
           type="text"
           placeholder="Digite uma medida MGTL (anos luz), ex: 1000000"
         />
