@@ -51,7 +51,6 @@ export default function calculateTripStops({
       hours = 24 * 30 * 12;
       break;
     default:
-      hours = 1;
       break;
   }
 
