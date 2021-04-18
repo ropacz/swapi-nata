@@ -7,9 +7,20 @@ export const HeaderPage = styled.header`
   position: sticky;
   border-bottom: 2px solid #202320;
   background: #202320;
+  top: 0;
+  z-index: 999;
 
   nav {
     display: flex;
+  }
+
+  h1 a {
+    color: #f3db3b;
+    text-decoration: none;
+  }
+
+  h1 a:hover {
+    color: #fff;
   }
 
   nav > ul {
@@ -20,7 +31,26 @@ export const HeaderPage = styled.header`
     list-style: none;
   }
 
+  ul a {
+    color: #f3db3b;
+    text-decoration: none;
+  }
+
+  ul a:hover {
+    text-decoration: line-through;
+  }
+
   .container {
     justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      text-align: center;
+      width: 100%;
+    }
+    nav {
+      margin: 10px auto;
+    }
   }
 `;
