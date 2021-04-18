@@ -67,23 +67,24 @@ const StarshipProvider: React.FC = ({ children }) => {
     }
   }, [currentPage, distance]);
 
-  const nextPage = (page: string): void => {
+  const nextPage = useCallback((page: string): void => {
     if (page) {
       setCurrentPage(page);
     }
-  };
-  const previousPage = (page: string): void => {
-    if (page) {
-      setCurrentPage(page);
-    }
-  };
+  }, []);
 
-  const setDistanceMglt = (mglt: string): void => {
+  const previousPage = useCallback((page: string): void => {
+    if (page) {
+      setCurrentPage(page);
+    }
+  }, []);
+
+  const setDistanceMglt = useCallback((mglt: string): void => {
     if (mglt) {
       setDistance(mglt);
       setCurrentPage(null);
     }
-  };
+  }, []);
 
   return (
     <ContextStarship.Provider
