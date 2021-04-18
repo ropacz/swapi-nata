@@ -13,6 +13,7 @@ export default createGlobalStyle`
     background: url(${starsPattern}) center;
     background-color: #323133;
     color: #fff;
+    background-size: 400px 400px;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -23,6 +24,7 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h6, strong {
     font-weight: 500;
+    padding: 5px;
   }
 
   button{
@@ -35,7 +37,7 @@ export default createGlobalStyle`
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 10px auto;
     flex-wrap: wrap;
   }
 
@@ -43,5 +45,6 @@ export default createGlobalStyle`
     display: flex;
     flex-wrap: wrap;
   }
+  
 
 `;
