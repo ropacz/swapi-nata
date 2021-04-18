@@ -9,12 +9,12 @@ const About: React.FC = () => (
     <div className="container">
       <Container>
         <p>
-          Essa aplicação utilizada a API Swapi (https://swapi.dev) para
-          construir um repositório de naves intergalácticas da franquia de
-          filmes de Star Wars. Sendo necessário para a listagem das naves o
-          usuário digitar uma distância em MGLT*, essa distância é utilizada
-          para calcular o número de paradas necessárias que cada nave precisará
-          fazer para o reabastecimento.
+          Essa aplicação utiliza a API Swapi (https://swapi.dev) para construir
+          um repositório de naves intergalácticas da franquia de filmes de Star
+          Wars. Sendo necessário para a listagem das naves o usuário digitar uma
+          distância em MGLT*, essa distância é utilizada para calcular o número
+          de paradas necessárias que cada nave precisará fazer para o
+          reabastecimento.
         </p>
         <p>
           A Swapi é uma API JSON com diversas rotas, entre essas rotas, existe a
