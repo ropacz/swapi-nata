@@ -16,7 +16,7 @@ São utilizados algumas informações sobre as naves da API e valores inseridos 
 
 - `stops`: Número de paradas necessárias para o reabastecimento de uma nave dependendo da distância em MGLT fornecida pelo usuário.
 
-Para o cálculo da quantidade de `stops` utilizei a distância fornecida pelo usuário em MGLT, a velocidade máxima da nave em MGLT e o tempo máximo de consumíveis da nave em horas. Em resumo, o método de cálculo foi o seguinte:
+Para o cálculo da quantidade de `stops` utilizei a distância fornecida pelo usuário em MGLT, a velocidade máxima da nave em MGLT e o tempo máximo de consumíveis da nave em horas. Em resumo, o método de cálculo que foi realizado é o seguinte:
 
 ![alt text](https://i.imgur.com/OdldnMb.png)
 
