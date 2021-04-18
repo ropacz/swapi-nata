@@ -1,5 +1,17 @@
 import React from 'react';
 
-const App: React.FC = () => <h1>Hello World!</h1>;
+import { StarshipProvider } from './hooks/useStarshipData';
+
+import Home from './pages/Home';
+import GlobalStyle from './styles/globalStyles';
+
+const App: React.FC = () => (
+  <>
+    <StarshipProvider>
+      <Home />
+    </StarshipProvider>
+    <GlobalStyle />
+  </>
+);
 
 export default App;
