@@ -24,7 +24,8 @@ export const Form = styled.form`
   }
 
   button {
-    width: 210px;
+    max-width: 210px;
+    width: 100%;
     height: 70px;
     background-color: #f3db3b;
     border-radius: 0px 5px 5px 0px;
@@ -32,6 +33,13 @@ export const Form = styled.form`
     color: #202320;
     font-weight: bold;
     transition: background-color 0.2s;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+    button {
+      max-width: 300px;
+    }
   }
 `;
 
