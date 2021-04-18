@@ -19,8 +19,33 @@ export const CardList = styled.header`
   }
 
   ul > li > h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
     margin: 10px auto;
+  }
+
+  li {
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+  li:first-child {
+    background-color: #323133;
+    color: #fff;
+  }
+
+  li:nth-child(1n) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem auto 0 auto;
   }
 `;
