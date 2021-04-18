@@ -24,7 +24,8 @@ const Home: React.FC = () => {
     <>
       <Header />
       <div className="container">
-        <Search handleDistanceMglt={setDistanceMglt} />
+        <h3>Repositório de Naves Intergalácticas de Star Wars</h3>
+        <Search handleDistanceMglt={setDistanceMglt} distance={distance} />
       </div>
 
       <div className="container">
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
         </List>
       </div>
 
-      <div className="container" style={{ flexWrap: 'wrap' }}>
+      <div className="container">
         {!loading && <Pagination next={next} previous={previous} />}
       </div>
     </>
